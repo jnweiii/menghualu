@@ -1,0 +1,23 @@
+<view class="route-page">
+  <view class="route-header">
+    <view class="route-title">全国宋文化路线</view>
+    <view class="route-subtitle">时间轴 · 地图联动</view>
+  </view>
+
+  <view class="route-layout">
+    <view class="route-timeline">
+      <view class="route-node is-active">北宋兴起</view>
+      <view class="route-node">盛世都城</view>
+      <view class="route-node">西京洛阳</view>
+      <view class="route-node">南宋临安</view>
+      <view class="route-node">文化南迁</view>
+    </view>
+    <view class="route-map">
+      <view class="route-placeholder">全国地图加载中</view>
+    </view>
+  </view>
+
+  <view class="route-action">
+    生成我的寻宋路线
+  </view>
+</view>

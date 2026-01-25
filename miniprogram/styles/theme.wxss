@@ -1,0 +1,11 @@
+page {
+  /* 宋都色彩：后续可按设计书提供的精确色值替换 */
+  --color-tianqing: #8dbbd2;
+  --color-bianlv: #5f9c8a;
+  --color-xiahong: #c65a5a;
+  --color-paper: #f8f6f0;
+  --color-ink: #3b2f2a;
+  --color-ink-light: #7a6c5d;
+  --color-border: #e6dfd5;
+  --color-white: #ffffff;
+}

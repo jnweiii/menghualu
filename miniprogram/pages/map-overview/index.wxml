@@ -1,0 +1,28 @@
+<view class="map-page">
+  <view class="map-header">
+    <view class="map-title">开封宋迹总览地图</view>
+    <view class="map-subtitle">古今对照 · 宋都遗韵</view>
+  </view>
+
+  <view class="map-container">
+    <view class="map-placeholder">
+      地图区域加载中
+    </view>
+    <view class="map-layer-toggle">
+      <view class="map-layer-label">今 / 古图层切换</view>
+      <view class="map-layer-button">切换图层</view>
+    </view>
+  </view>
+
+  <view class="map-panel">
+    <view class="map-panel-title">地标信息卡片</view>
+    <view class="map-panel-desc">
+      点击地标后展示古今名称、简介与快速入口
+    </view>
+    <view class="map-panel-actions">
+      <view class="map-action">查看详情</view>
+      <view class="map-action">AR 识迹</view>
+      <view class="map-action">地图导航</view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,11 @@
+<view class="contact-page">
+  <view class="contact-card">
+    <view class="contact-title">联系我们</view>
+    <view class="contact-desc">
+      若需合作、建议或素材支持，请通过项目官方渠道与我们取得联系。
+    </view>
+    <view class="contact-tip">
+      联系方式将在确定后展示
+    </view>
+  </view>
+</view>
