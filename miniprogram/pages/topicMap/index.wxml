@@ -1,0 +1,26 @@
+<view class="topic-page">
+  <view class="topic-header">
+    <view class="topic-title">专题地图</view>
+    <view class="topic-subtitle">夜市 · 美食 · 瓦子 · 节庆</view>
+  </view>
+
+  <view class="topic-tags">
+    <view class="topic-tag is-active">夜市</view>
+    <view class="topic-tag">美食</view>
+    <view class="topic-tag">瓦子</view>
+    <view class="topic-tag">节庆</view>
+  </view>
+
+  <view class="topic-map">
+    <view class="topic-placeholder">
+      专题地图加载中
+    </view>
+  </view>
+
+  <view class="topic-panel">
+    <view class="topic-panel-title">文献原文对照</view>
+    <view class="topic-panel-desc">
+      选中专题地点后展示《东京梦华录》原文与白话释义
+    </view>
+  </view>
+</view>
