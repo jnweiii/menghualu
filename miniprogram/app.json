@@ -1,0 +1,41 @@
+{
+  "pages": [
+    "pages/home/index",
+    "pages/contact/index",
+    "pages/map-overview/index",
+    "pages/landmark-detail/index",
+    "pages/routeMap/index",
+    "pages/landmark-info/index"
+    
+  ],
+  "window": {
+    "backgroundColor": "#F8F6F0",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#8DBBD2",
+    "navigationBarTitleText": "梦华录数字地图",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "color": "#7A6C5D",
+    "selectedColor": "#C65A5A",
+    "backgroundColor": "#F8F6F0",
+    "borderStyle": "white",
+    "list": [
+      {
+        "pagePath": "pages/home/index",
+        "text": "首页",
+        "iconPath": "images/icons/home.png",
+        "selectedIconPath": "images/icons/home-active.png"
+      },
+      {
+        "pagePath": "pages/contact/index",
+        "text": "联系我们",
+        "iconPath": "images/icons/usercenter.png",
+        "selectedIconPath": "images/icons/usercenter-active.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json",
+  "style": "v2",
+  "lazyCodeLoading": "requiredComponents"
+}

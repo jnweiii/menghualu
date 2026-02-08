@@ -1,0 +1,104 @@
+<!-- pages/map-overview/index.wxml -->
+
+<!-- 全屏地图容器 -->
+<view style="width: 100%; height: 100vh;">
+    <map
+        id="mainMap"
+        longitude="{{longitude}}"
+        latitude="{{latitude}}"
+        scale="{{scale}}"
+        markers="{{markers}}"
+        style="width: 100%; height: 100%;"
+        enable-poi="{{false}}"
+        show-location="{{true}}"
+        show-compass="{{true}}"
+        show-scale="{{true}}"
+        enable-zoom="{{true}}"
+        enable-scroll="{{true}}"
+        enable-rotate="{{false}}"
+        enable-overlooking="{{false}}"
+        enable-traffic="{{false}}"
+        enable-building="{{false}}"
+        enable-satellite="{{false}}"
+        enable-3D="{{false}}"
+        bindmarkertap="onMarkerTap"
+    >
+    </map>
+    
+    <!-- 控制按钮（右上角） -->
+    <view class="control-buttons" style="position: absolute; top: 20px; right: 20px;">
+        <button bindtap="toggleAncientLayer" style="font-size: 12px; padding: 6px 12px; background: #8B4513; color: white; border-radius: 4px;">
+            古今图层
+        </button>
+    </view>
+</view>
+
+<!-- 底部弹窗（位于手机下半部分） -->
+<view class="bottom-popup-overlay" wx:if="{{showBottomPopup}}" bindtap="closeBottomPopup">
+    <view class="bottom-popup-container" bindtap="stopPropagation">
+        
+        <!-- 弹窗顶部拖拽条 -->
+        <view class="popup-drag-bar"></view>
+        
+        <!-- 内容区域 -->
+        <view class="popup-content">
+            
+            <!-- 第一行：图标和基本信息 -->
+            <view class="popup-header">
+                <!-- 左边：与marker对应的图标 -->
+                <view class="marker-icon-container">
+                    <!-- 这里调整图标大小 -->
+                    <image 
+                        wx:if="{{popupData.markerIcon}}"
+                        src="{{popupData.markerIcon}}" 
+                        style="width: 100rpx; height: 100rpx;"
+                        mode="aspectFit"
+                    />
+                    <!-- 如果没有图标，显示占位符 -->
+                    <view wx:else class="icon-placeholder">
+                        <text class="placeholder-text">图</text>
+                    </view>
+                </view>
+                
+                <!-- 右边：名称信息 -->
+                <view class="info-column">
+                    <text class="landmark-name">{{popupData.name}}</text>
+                    <text class="ancient-name">古称：{{popupData.ancientName}}</text>
+                    <view class="dynasty-row">
+                        <text class="dynasty">朝代：{{popupData.dynasty}}</text>
+                        <text class="property">性质：{{popupData.type}}</text>
+                    </view>
+                </view>
+            </view>
+            
+            <!-- 分隔线 -->
+            <view class="divider"></view>
+            
+            <!-- 简介 -->
+            <view class="intro-section">
+                <text class="intro-text">{{popupData.intro}}</text>
+            </view>
+            
+            <!-- 按钮区域 -->
+            <view class="button-section">
+                <!-- 第一行：两个按钮 -->
+                <view class="button-row">
+                    <button class="detail-btn" catchtap="goToDetailPage">
+                        <text class="btn-text">查看详情</text>
+                    </button>
+                    <button class="ar-btn" catchtap="openAR">
+                        <text class="btn-text">AR识迹</text>
+                    </button>
+                </view>
+                
+                <!-- 第二行：一个按钮 -->
+                <view class="button-row">
+                    <button class="nav-btn" catchtap="openNavigation">
+                        <text class="btn-text">地图导航</text>
+                    </button>
+                </view>
+            </view>
+            
+        </view>
+    </view>
+</view>

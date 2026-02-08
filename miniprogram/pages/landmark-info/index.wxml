@@ -1,0 +1,108 @@
+<!-- pages/landmark-info/index.wxml -->
+<view class="landmark-detail-page">
+  <!-- 图片标签栏 -->
+  <view class="image-label-container">
+    <view class="section-label" style="background-color: {{landmarkType === '城门/宫阙类' ? '#5d95a9' : landmarkType === '宗教建筑类' ? '#5d95a9' : landmarkType === '遗址/考古点类' ? '#5d95a9' : landmarkType === '文博场馆类' ? '#5d95a9' : landmarkType === '皇家园林' ? '#5d95a9' : landmarkType === '地标桥梁' ? '#5d95a9' : landmarkType === '商业娱乐' ? '#5d95a9' : landmarkType === '公共空间' ? '#5d95a9' : landmarkType === '主题景区' ? '#5d95a9' : landmarkType === '文博场馆' ? '#5d95a9' : landmarkType === '历史街区' ? '#5d95a9' : landmarkType === '现代地标' ? '#5d95a9' : landmarkType === '体验服务' ? '#5d95a9' : '#5d95a9'}};">图片</view>
+  </view>
+  
+  <!-- 图片展示区域 -->
+  <view class="image-section">
+    <view class="swiper-container">
+      <swiper 
+        indicator-dots="{{indicatorDots}}" 
+        indicator-color="{{indicatorColor}}"
+        indicator-active-color="{{indicatorActiveColor}}"
+        autoplay="{{autoplay}}" 
+        interval="{{interval}}" 
+        duration="{{duration}}"
+        bindchange="swiperChange"
+        circular
+      >
+        <block wx:for="{{imgUrls}}" wx:key="index">
+          <swiper-item>
+            <image src="{{item}}" mode="aspectFill" class="detail-image" />
+          </swiper-item>
+        </block>
+      </swiper>
+      <view class="image-indicator">
+        <text class="current-index">{{currentImageIndex + 1}}</text>
+        <text class="total-count">/{{imgUrls.length}}</text>
+      </view>
+    </view>
+  </view>
+  
+  <!-- 内容容器 -->
+  <scroll-view 
+    class="content-container" 
+    scroll-y 
+    scroll-top="{{scrollTop}}"
+    bindscroll="onPageScroll"
+    style="height: {{containerHeight}}px;"
+  >
+    <!-- 坐标区域 -->
+    <view class="content-section">
+      <view class="section-label" style="background-color: {{landmarkType === '城门/宫阙类' ? '#5d95a9' : landmarkType === '宗教建筑类' ? '#5d95a9' : landmarkType === '遗址/考古点类' ? '#5d95a9' : landmarkType === '文博场馆类' ? '#5d95a9' : landmarkType === '皇家园林' ? '#5d95a9' : landmarkType === '地标桥梁' ? '#5d95a9' : landmarkType === '商业娱乐' ? '#5d95a9' : landmarkType === '公共空间' ? '#5d95a9' : landmarkType === '主题景区' ? '#5d95a9' : landmarkType === '文博场馆' ? '#5d95a9' : landmarkType === '历史街区' ? '#5d95a9' : landmarkType === '现代地标' ? '#5d95a9' : landmarkType === '体验服务' ? '#5d95a9' : '#5d95a9'}};">
+        {{landmarkType === '主题景区' || landmarkType === '文博场馆' || landmarkType === '历史街区' || landmarkType === '现代地标' || landmarkType === '体验服务' ? '坐标' : (speculativeBasisData ? '推测坐标' : '坐标')}}
+      </view>
+      <view class="coordinate-content">
+        <view class="coordinate-item">
+          <text class="coordinate-label">东经：</text>
+          <text class="coordinate-value">{{coordinateData.x}}</text>
+        </view>
+        <view class="coordinate-item">
+          <text class="coordinate-label">北纬：</text>
+          <text class="coordinate-value">{{coordinateData.y}}</text>
+        </view>
+        <view class="coordinate-item">
+          <text class="coordinate-label">位置：</text>
+          <text class="coordinate-value">{{coordinateData.location}}</text>
+        </view>
+      </view>
+    </view>
+    
+    <!-- 推测依据区域（仅第二层级且有推测依据时显示） -->
+    <view wx:if="{{speculativeBasisData}}" class="content-section">
+      <view class="section-label" style="background-color: {{landmarkType === '城门/宫阙类' ? '#5d95a9' : landmarkType === '宗教建筑类' ? '#5d95a9' : landmarkType === '遗址/考古点类' ? '#5d95a9' : landmarkType === '文博场馆类' ? '#5d95a9' : landmarkType === '皇家园林' ? '#5d95a9' : landmarkType === '地标桥梁' ? '#5d95a9' : landmarkType === '商业娱乐' ? '#5d95a9' : landmarkType === '公共空间' ? '#5d95a9' : '#5d95a9'}};">推测依据</view>
+      <view class="intro-content">
+        <text class="intro-text">{{speculativeBasisData}}</text>
+      </view>
+    </view>
+    
+    <!-- 简介区域 -->
+    <view class="content-section">
+      <view class="section-label" style="background-color: {{landmarkType === '城门/宫阙类' ? '#5d95a9' : landmarkType === '宗教建筑类' ? '#5d95a9' : landmarkType === '遗址/考古点类' ? '#5d95a9' : landmarkType === '文博场馆类' ? '#5d95a9' : landmarkType === '皇家园林' ? '#5d95a9' : landmarkType === '地标桥梁' ? '#5d95a9' : landmarkType === '商业娱乐' ? '#5d95a9' : landmarkType === '公共空间' ? '#5d95a9' : landmarkType === '主题景区' ? '#5d95a9' : landmarkType === '文博场馆' ? '#5d95a9' : landmarkType === '历史街区' ? '#5d95a9' : landmarkType === '现代地标' ? '#5d95a9' : landmarkType === '体验服务' ? '#5d95a9' : '#5d95a9'}};">简介</view>
+      <view class="intro-content">
+        <text class="intro-text">{{introData}}</text>
+      </view>
+    </view>
+    
+    <!-- 文献出处区域（第一、第二层级显示） -->
+    <view wx:if="{{!officialInfoData || officialInfoData.length === 0}}" class="content-section">
+      <view class="section-label" style="background-color: {{landmarkType === '城门/宫阙类' ? '#5d95a9' : landmarkType === '宗教建筑类' ? '#5d95a9' : landmarkType === '遗址/考古点类' ? '#5d95a9' : landmarkType === '文博场馆类' ? '#5d95a9' : landmarkType === '皇家园林' ? '#5d95a9' : landmarkType === '地标桥梁' ? '#5d95a9' : landmarkType === '商业娱乐' ? '#5d95a9' : landmarkType === '公共空间' ? '#5d95a9' : '#5d95a9'}};">文献出处</view>
+      <view class="literature-content">
+        <block wx:for="{{literatureData}}" wx:key="index">
+          <view class="literature-item">
+            <text class="literature-text">{{item}}</text>
+          </view>
+        </block>
+      </view>
+    </view>
+    
+    <!-- 官方参观信息区域（第三层级显示） -->
+    <view wx:if="{{officialInfoData && officialInfoData.length > 0}}" class="content-section">
+      <view class="section-label" style="background-color: #5d95a9;">官方参观信息</view>
+      <view class="literature-content">
+        <block wx:for="{{officialInfoData}}" wx:key="index">
+          <view class="literature-item">
+            <text class="literature-text">{{item}}</text>
+          </view>
+        </block>
+      </view>
+    </view>
+  </scroll-view>
+  
+  <!-- 收起按钮 -->
+  <view class="close-button" style="background-color: {{landmarkType === '城门/宫阙类' ? '#5d95a9' : landmarkType === '宗教建筑类' ? '#5d95a9' : landmarkType === '遗址/考古点类' ? '#5d95a9' : landmarkType === '文博场馆类' ? '#5d95a9' : landmarkType === '皇家园林' ? '#5d95a9' : landmarkType === '地标桥梁' ? '#5d95a9' : landmarkType === '商业娱乐' ? '#5d95a9' : landmarkType === '公共空间' ? '#5d95a9' : landmarkType === '主题景区' ? '#5d95a9' : landmarkType === '文博场馆' ? '#5d95a9' : landmarkType === '历史街区' ? '#5d95a9' : landmarkType === '现代地标' ? '#5d95a9' : landmarkType === '体验服务' ? '#5d95a9' : '#5d95a9'}};" bindtap="goBack">
+    <text class="close-text">收起</text>
+  </view>
+</view>

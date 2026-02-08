@@ -1,0 +1,33 @@
+.contact-page {
+  padding: 32rpx 28rpx 80rpx;
+  color: var(--color-ink);
+}
+
+.contact-card {
+  background: var(--color-white);
+  border: 2rpx solid var(--color-border);
+  border-radius: 24rpx;
+  padding: 40rpx 32rpx;
+  box-shadow: 0 10rpx 24rpx rgba(0, 0, 0, 0.04);
+}
+
+.contact-title {
+  font-size: 34rpx;
+  font-weight: 600;
+  color: var(--color-ink);
+  margin-bottom: 18rpx;
+}
+
+.contact-desc {
+  font-size: 26rpx;
+  line-height: 1.7;
+  color: var(--color-ink-light);
+  margin-bottom: 28rpx;
+}
+
+.contact-tip {
+  font-size: 24rpx;
+  color: #9b8f7f;
+  padding: 18rpx 0;
+  border-top: 2rpx dashed var(--color-border);
+}

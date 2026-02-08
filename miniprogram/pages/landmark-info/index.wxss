@@ -1,0 +1,177 @@
+/* pages/landmark-info/index.wxss */
+page {
+  font-family: 'Source Han Serif SC', 'Noto Serif SC', 'SimSun', '宋体', 'STSong', 'Songti SC', serif;
+  background-color: #f8f5f0;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.landmark-detail-page {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding-top: 20rpx;
+  position: relative;
+}
+
+/* 图片标签容器 */
+.image-label-container {
+  padding: 0 20rpx;
+  margin-bottom: 10rpx;
+}
+
+/* 标签样式 */
+.section-label {
+  padding: 14rpx 30rpx;
+  font-size: 32rpx;
+  font-family: 'Source Han Serif SC', 'Noto Serif SC', 'SimSun', '宋体', 'STSong', 'Songti SC', serif;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 12rpx;
+  display: inline-block;
+  min-width: 140rpx;
+  text-align: center;
+  box-shadow: 0 4rpx 12rpx rgba(0, 0, 0, 0.2);
+  text-shadow: 0 1rpx 2rpx rgba(0, 0, 0, 0.3);
+}
+
+/* 图片展示区域 */
+.image-section {
+  margin: 0 20rpx 20rpx;
+  background-color: #fff;
+  border-radius: 16rpx;
+  overflow: hidden;
+  box-shadow: 0 4rpx 12rpx rgba(0, 0, 0, 0.08);
+  flex-shrink: 0;
+}
+
+.swiper-container {
+  position: relative;
+  height: 400rpx;
+}
+
+.detail-image {
+  width: 100%;
+  height: 100%;
+}
+
+.image-indicator {
+  position: absolute;
+  bottom: 20rpx;
+  right: 20rpx;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 8rpx 16rpx;
+  border-radius: 20rpx;
+}
+
+.current-index, .total-count {
+  font-size: 24rpx;
+  font-family: 'Source Han Serif SC', 'Noto Serif SC', 'SimSun', '宋体', 'STSong', 'Songti SC', serif;
+  color: #fff;
+}
+
+/* 内容容器 */
+.content-container {
+  flex: 1;
+  margin: 0 20rpx;
+  padding: 0;
+  overflow-y: auto;
+}
+
+/* 内容区块 */
+.content-section {
+  margin-bottom: 30rpx;
+  background-color: #fff;
+  border-radius: 16rpx;
+  overflow: hidden;
+  box-shadow: 0 4rpx 12rpx rgba(0, 0, 0, 0.08);
+}
+
+/* 坐标内容样式 */
+.coordinate-content {
+  padding: 30rpx;
+  padding-top: 20rpx;
+}
+
+.coordinate-item {
+  margin-bottom: 20rpx;
+  display: flex;
+}
+
+.coordinate-label {
+  font-size: 28rpx;
+  color: #333;
+  font-weight: bold;
+  min-width: 120rpx;
+  font-family: 'Source Han Serif SC', 'Noto Serif SC', 'SimSun', '宋体', 'STSong', 'Songti SC', serif;
+}
+
+.coordinate-value {
+  font-size: 28rpx;
+  font-family: 'Source Han Serif SC', 'Noto Serif SC', 'SimSun', '宋体', 'STSong', 'Songti SC', serif;
+  color: #666;
+  line-height: 1.6;
+  flex: 1;
+}
+
+/* 简介内容样式 */
+.intro-content {
+  padding: 30rpx;
+  padding-top: 20rpx;
+}
+
+.intro-text {
+  font-size: 28rpx;
+  font-family: 'Source Han Serif SC', 'Noto Serif SC', 'SimSun', '宋体', 'STSong', 'Songti SC', serif;
+  color: #333;
+  line-height: 1.8;
+  text-align: justify;
+  font-style: normal; /* 确保不是斜体 */
+}
+
+/* 文献出处样式 */
+.literature-content {
+  padding: 30rpx;
+  padding-top: 20rpx;
+}
+
+.literature-item {
+  margin-bottom: 28rpx;
+  padding-bottom: 25rpx;
+  border-bottom: 1rpx solid #f0f0f0;
+}
+
+.literature-item:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.literature-text {
+  font-size: 28rpx; /* 统一字体大小 */
+  color: #333;
+  line-height: 1.8;
+  text-align: justify;
+  font-style: normal; /* 不斜体 */
+  font-family: 'Source Han Serif SC', 'Noto Serif SC', 'SimSun', '宋体', 'STSong', 'Songti SC', serif;
+}
+
+
+/* 收起按钮 */
+.close-button {
+  margin: 20rpx;
+  padding: 28rpx 0;
+  text-align: center;
+  border-radius: 16rpx;
+  font-size: 34rpx;
+  font-weight: bold;
+  color: #fff;
+  box-shadow: 0 4rpx 12rpx rgba(0, 0, 0, 0.2);
+  flex-shrink: 0;
+  z-index: 100;
+}
+
+.close-text {
+  color: #fff;
+  text-shadow: 0 1rpx 2rpx rgba(0, 0, 0, 0.3);
+}

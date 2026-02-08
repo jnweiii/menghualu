@@ -1,0 +1,231 @@
+/* pages/map-overview/index.wxss */
+
+/* ==================== 底部弹窗样式 ==================== */
+
+/* 遮罩层 */
+.bottom-popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  display: flex;
+  align-items: flex-end;
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* 弹窗容器 */
+.bottom-popup-container {
+  width: 100%;
+  background: #FFFFFF;
+  border-radius: 30rpx 30rpx 0 0;
+  overflow: hidden;
+  box-shadow: 0 -10rpx 40rpx rgba(0, 0, 0, 0.15);
+  animation: slideUp 0.3s ease;
+  max-height: 80vh;
+  display: flex;
+  flex-direction: column;
+}
+
+@keyframes slideUp {
+  from { transform: translateY(100%); }
+  to { transform: translateY(0); }
+}
+
+/* 拖拽条 */
+.popup-drag-bar {
+  width: 60rpx;
+  height: 8rpx;
+  background: #E0E0E0;
+  border-radius: 4rpx;
+  margin: 20rpx auto;
+}
+
+/* 内容区域 */
+.popup-content {
+  padding: 0 40rpx 40rpx;
+  flex: 1;
+  overflow-y: auto;
+}
+
+/* ==================== 头部区域 ==================== */
+.popup-header {
+  display: flex;
+  align-items: center; /* 垂直居中 */
+  margin-bottom: 30rpx;
+  padding-top: 10rpx;
+}
+
+/* ==================== MARKER图标区域 ==================== */
+/* 🎯 图标容器 - 控制图标整体位置 */
+.marker-icon-container {
+  /* 🎯 图标与右边文字的间距 */
+  margin-right: 30rpx; /* ← 调整这个值控制图标与文字的间距 */
+  
+  /* 🎯 图标容器尺寸 */
+  width: rpx; /* ← 调整这个值控制图标容器宽度 */
+  height: rpx; /* ← 调整这个值控制图标容器高度 */
+  
+  /* 🎯 图标容器形状 */
+  border-radius: 8rpx; /* ← 调整这个值：8rpx=方形，35rpx=圆形 */
+  
+  /* 🎯 图标容器背景色（如果需要背景色的话） */
+  background-color: #f8f8f8; /* ← 这个颜色会被JS动态覆盖 */
+  
+  /* 居中显示 */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  /* 阴影效果（可选） */
+  box-shadow: 0 4rpx 12rpx rgba(0, 0, 0, 0.08);
+  
+  /* 防止图标溢出容器 */
+  overflow: hidden;
+}
+
+/* 🎯 图标图片样式 - 控制图标本身大小 */
+.marker-icon {
+  /* 🎯 图标尺寸（占容器的70%） */
+  width: 50rpx; /* ← 调整这个值控制图标宽度 */
+  height: 50rpx; /* ← 调整这个值控制图标高度 */
+  
+  /* 确保图标比例不变形 */
+  object-fit: contain;
+}
+
+/* 🎯 图标占位符（当没有图标时显示） */
+.icon-placeholder {
+  width: 50rpx;
+  height: 50rpx;
+  background-color: #e0e0e0;
+  border-radius: 6rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.placeholder-text {
+  font-size: 22rpx;
+  color: #666;
+}
+
+/* ==================== 文字信息区域 ==================== */
+.info-column {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.landmark-name {
+  font-size: 36rpx;
+  font-weight: bold;
+  color: #333333;
+  margin-bottom: 8rpx;
+}
+
+.ancient-name {
+  font-size: 28rpx;
+  color: #666666;
+  margin-bottom: 8rpx;
+}
+
+.dynasty-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 26rpx;
+}
+
+.dynasty {
+  color: #8B4513;
+  font-weight: 500;
+}
+
+.property {
+  color: #8B4513;
+  font-weight: 500;
+}
+
+/* 分隔线 */
+.divider {
+  height: 2rpx;
+  background: #F0F0F0;
+  margin: 30rpx 0;
+}
+
+/* 简介区域 */
+.intro-section {
+  margin-bottom: 40rpx;
+}
+
+.intro-text {
+  font-size: 28rpx;
+  line-height: 1.6;
+  color: #333333;
+}
+
+/* ==================== 按钮区域 ==================== */
+.button-section {
+  display: flex;
+  flex-direction: column;
+  gap: 20rpx;
+}
+
+.button-row {
+  display: flex;
+  gap: 20rpx;
+}
+
+/* 按钮样式 */
+.detail-btn,
+.ar-btn,
+.nav-btn {
+  flex: 1;
+  height: 80rpx;
+  border-radius: 40rpx;
+  font-size: 30rpx;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  transition: all 0.2s;
+}
+
+.detail-btn:active,
+.ar-btn:active,
+.nav-btn:active {
+  opacity: 0.8;
+  transform: scale(0.98);
+}
+
+/* 查看详情按钮 - 天青色 #5d95a9 */
+.detail-btn {
+  background: #5d95a9;
+  color: #FFFFFF;
+}
+
+/* AR识迹按钮 - 霞红色 #d2704d */
+.ar-btn {
+  background: #d2704d;
+  color: #FFFFFF;
+  border: 2rpx solid #8B4513;
+}
+
+/* 地图导航按钮 - 汴绿色 #709a89 */
+.nav-btn {
+  background: #709a89;
+  color: #FFFFFF;
+  border: 2rpx solid #8B4513;
+}
+
+.btn-text {
+  font-weight: 500;
+}

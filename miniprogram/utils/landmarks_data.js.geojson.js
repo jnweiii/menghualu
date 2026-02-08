@@ -1,0 +1,52 @@
+// utils/landmarks_data.js - 完整数据文件（44个地标）
+module.exports = {
+  "type": "FeatureCollection",
+  "features": [
+    // 原有29个遗址（ID 1-29）
+    {"type":"Feature","id":1,"properties":{"name":"繁塔","type":"宗教建筑","intro":"北宋时期著名楼阁式砖塔，开封现存最古老的地面建筑之一。"},"geometry":{"type":"Point","coordinates":[114.364807,34.769842]}},
+    {"type":"Feature","id":2,"properties":{"name":"顺天门","type":"城门遗址","intro":"北宋东京城外城西墙北门"},"geometry":{"type":"Point","coordinates":[114.30506137,34.79514005]}},
+    {"type":"Feature","id":3,"properties":{"name":"万胜门遗址","type":"城门遗址","intro":"北宋东京城外城西墙南门"},"geometry":{"type":"Point","coordinates":[114.298,34.805]}},
+    {"type":"Feature","id":4,"properties":{"name":"景龙门遗址","type":"城门遗址","intro":"北宋东京城内城北墙西门"},"geometry":{"type":"Point","coordinates":[114.3582,34.8165]}},
+    {"type":"Feature","id":5,"properties":{"name":"铁塔","type":"宗教建筑","intro":"北宋开宝寺塔，琉璃砖塔"},"geometry":{"type":"Point","coordinates":[114.3665947,34.81297911]}},
+    {"type":"Feature","id":6,"properties":{"name":"州桥遗址","type":"遗址","intro":"横跨汴河的重要桥梁"},"geometry":{"type":"Point","coordinates":[114.350844,34.790644]}},
+    {"type":"Feature","id":7,"properties":{"name":"汴河遗址","type":"水系遗址","intro":"北宋东京城生命线运河"},"geometry":{"type":"Point","coordinates":[114.34581348,34.79137629]}},
+    {"type":"Feature","id":8,"properties":{"name":"汴河故道（局部段）","type":"水系遗址","intro":"汴河局部河道遗迹"},"geometry":{"type":"Point","coordinates":[114.34581348,34.79137629]}},
+    {"type":"Feature","id":9,"properties":{"name":"外城护城壕西墙南段","type":"防御遗址","intro":"外城西墙南段护城河"},"geometry":{"type":"Point","coordinates":[114.2915,34.7868]}},
+    {"type":"Feature","id":10,"properties":{"name":"外城南墙护城壕（南薰门段）","type":"防御遗址","intro":"外城南墙护城河南薰门段"},"geometry":{"type":"Point","coordinates":[114.3058,34.7892]}},
+    {"type":"Feature","id":11,"properties":{"name":"内城护城壕北墙段","type":"防御遗址","intro":"内城北墙段护城河"},"geometry":{"type":"Point","coordinates":[114.3076,34.7981]}},
+    {"type":"Feature","id":12,"properties":{"name":"州桥遗址护城关联区","type":"防御遗址","intro":"州桥附近的护城河区域"},"geometry":{"type":"Point","coordinates":[114.3082,34.7925]}},
+    {"type":"Feature","id":13,"properties":{"name":"明代周王府典仪所核心区","type":"建筑遗址","intro":"明代周王府典仪所所在区域"},"geometry":{"type":"Point","coordinates":[114.3526,34.7938]}},
+    {"type":"Feature","id":14,"properties":{"name":"顺天门遗址博物馆","type":"文博场馆","intro":"顺天门遗址博物馆"},"geometry":{"type":"Point","coordinates":[114.30506137,34.79514005]}},
+    {"type":"Feature","id":15,"properties":{"name":"大庆殿","type":"宫殿遗址","intro":"北宋皇宫主殿"},"geometry":{"type":"Point","coordinates":[114.35216703,34.80504713]}},
+    {"type":"Feature","id":16,"properties":{"name":"开封府","type":"衙署遗址","intro":"北宋首都府衙"},"geometry":{"type":"Point","coordinates":[114.34648023,34.78970693]}},
+    {"type":"Feature","id":17,"properties":{"name":"朱雀门","type":"城门遗址","intro":"北宋东京城内城正南门"},"geometry":{"type":"Point","coordinates":[114.34999825,34.78570687]}},
+    {"type":"Feature","id":18,"properties":{"name":"南薰门","type":"城门遗址","intro":"北宋东京城外城正南门"},"geometry":{"type":"Point","coordinates":[114.34975415,34.7824267]}},
+    {"type":"Feature","id":19,"properties":{"name":"新门","type":"城门遗址","intro":"北宋东京城外城西墙城门"},"geometry":{"type":"Point","coordinates":[114.35874464,34.78177436]}},
+    {"type":"Feature","id":20,"properties":{"name":"大梁门","type":"城门遗址","intro":"开封古城西门，始于唐"},"geometry":{"type":"Point","coordinates":[114.32911439,34.8020847]}},
+    {"type":"Feature","id":21,"properties":{"name":"曹门","type":"城门遗址","intro":"开封古城东门，宋代称旧曹门"},"geometry":{"type":"Point","coordinates":[114.36564974,34.8005551]}},
+    {"type":"Feature","id":22,"properties":{"name":"宋门","type":"城门遗址","intro":"开封古城东门，宋代称旧宋门"},"geometry":{"type":"Point","coordinates":[114.36155453,34.78762725]}},
+    {"type":"Feature","id":23,"properties":{"name":"金明池","type":"园林遗址","intro":"北宋皇家水上园林与演练场"},"geometry":{"type":"Point","coordinates":[114.30093852,34.79970635]}},
+    {"type":"Feature","id":24,"properties":{"name":"大相国寺","type":"宗教建筑","intro":"北宋皇家寺院，东京最大佛寺"},"geometry":{"type":"Point","coordinates":[114.35460544,34.7919434]}},
+    {"type":"Feature","id":25,"properties":{"name":"开宝寺","type":"宗教建筑","intro":"北宋著名皇家寺院，内有铁塔"},"geometry":{"type":"Point","coordinates":[114.37253228,34.81220727]}},
+    {"type":"Feature","id":26,"properties":{"name":"天津桥","type":"桥梁遗址","intro":"汴河上著名桥梁"},"geometry":{"type":"Point","coordinates":[114.3517204,34.79054879]}},
+    {"type":"Feature","id":27,"properties":{"name":"樊楼","type":"商业遗址","intro":"北宋东京最著名的高级酒楼"},"geometry":{"type":"Point","coordinates":[114.35125766,34.80216961]}},
+    {"type":"Feature","id":28,"properties":{"name":"清明上河园","type":"现代景区","intro":"以《清明上河图》为蓝本的宋代文化主题公园"},"geometry":{"type":"Point","coordinates":[114.340685,34.809044]}},
+    {"type":"Feature","id":29,"properties":{"name":"开封府（现代景区）","type":"现代景区","intro":"仿建的北宋开封府衙"},"geometry":{"type":"Point","coordinates":[114.3465,34.789726]}},
+    
+    // 新增现代景点（ID 30-44）
+    {"type":"Feature","id":30,"properties":{"name":"大宋武侠城","type":"现代景区","intro":"宋代武侠文化主题景区"},"geometry":{"type":"Point","coordinates":[114.3518,34.819966]}},
+    {"type":"Feature","id":31,"properties":{"name":"中国翰园","type":"现代景区","intro":"中国首家民办书法园林"},"geometry":{"type":"Point","coordinates":[114.344712,34.80992]}},
+    {"type":"Feature","id":32,"properties":{"name":"开封博物馆","type":"文博场馆","intro":"开封市综合性博物馆"},"geometry":{"type":"Point","coordinates":[114.253818,34.803533]}},
+    {"type":"Feature","id":33,"properties":{"name":"开封美术博物馆","type":"文博场馆","intro":"开封市专业美术博物馆"},"geometry":{"type":"Point","coordinates":[114.255025,34.803475]}},
+    {"type":"Feature","id":34,"properties":{"name":"州桥遗址博物馆","type":"文博场馆","intro":"州桥遗址专题博物馆"},"geometry":{"type":"Point","coordinates":[114.350844,34.790644]}},
+    {"type":"Feature","id":35,"properties":{"name":"书店街","type":"商业街区","intro":"开封历史文化商业街"},"geometry":{"type":"Point","coordinates":[114.356206,34.799431]}},
+    {"type":"Feature","id":36,"properties":{"name":"马道街","type":"商业街区","intro":"开封传统商业街"},"geometry":{"type":"Point","coordinates":[114.355622,34.793751]}},
+    {"type":"Feature","id":37,"properties":{"name":"鼓楼街","type":"商业街区","intro":"开封中心商业街"},"geometry":{"type":"Point","coordinates":[114.357801,34.793724]}},
+    {"type":"Feature","id":38,"properties":{"name":"龙亭公园","type":"现代景区","intro":"清代建筑，建于宋宫基址上"},"geometry":{"type":"Point","coordinates":[114.35113,34.811187]}},
+    {"type":"Feature","id":39,"properties":{"name":"天波杨府","type":"现代景区","intro":"北宋抗辽英雄杨业府邸重建"},"geometry":{"type":"Point","coordinates":[114.347433,34.810734]}},
+    {"type":"Feature","id":40,"properties":{"name":"包公祠","type":"现代景区","intro":"纪念北宋名臣包拯的祠堂"},"geometry":{"type":"Point","coordinates":[114.33911,34.792935]}},
+    {"type":"Feature","id":41,"properties":{"name":"大宋御河（游船）","type":"现代景区","intro":"开封水系工程，可乘船游览"},"geometry":{"type":"Point","coordinates":[114.344842,34.807615]}},
+    {"type":"Feature","id":42,"properties":{"name":"鼓楼夜市","type":"商业街区","intro":"开封著名夜市小吃街"},"geometry":{"type":"Point","coordinates":[114.355996,34.793914]}},
+    {"type":"Feature","id":43,"properties":{"name":"小宋城","type":"现代景区","intro":"开封室内文化旅游综合体"},"geometry":{"type":"Point","coordinates":[114.310757,34.803281]}}
+  ]
+};
