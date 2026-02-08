@@ -1,8 +1,10 @@
 {
   "pages": [
+    "pages/splash/index",
     "pages/home/index",
     "pages/contact/index",
     "pages/map-overview/index",
+    "pages/topicMap/index",
     "pages/landmark-detail/index",
     "pages/routeMap/index",
     "pages/landmark-info/index"
