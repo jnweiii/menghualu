@@ -1,64 +1,104 @@
 .home-page {
-  padding: 32rpx 28rpx 80rpx;
-  color: var(--color-ink);
+  position: relative;
+  height: 100vh;
+  padding: 80rpx 0 40rpx; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+  overflow: hidden;
 }
 
-.home-hero {
-  background: linear-gradient(135deg, rgba(141, 187, 210, 0.16), rgba(198, 90, 90, 0.12));
-  border: 2rpx solid var(--color-border);
+.global-background { position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; z-index: -2; }
+.home-deco { position: fixed; right: 0; bottom: 0; width: 450rpx; height: 450rpx; z-index: -1; opacity: 0.3; }
+
+.home-hero { 
+  margin-bottom: 60rpx; 
+  text-align: center; 
+}
+.home-title { 
+  font-family: "Zhi Mang Xing", "STSong", serif;
+  font-size: 54rpx; 
+  font-weight: bold; 
+  color: #FFFFFF; 
+  letter-spacing: 6rpx; 
+  text-shadow: 0 2rpx 4rpx rgba(0,0,0,0.2); 
+}
+
+.home-subtitle { 
+  font-size: 26rpx; 
+  color: #FFFFFF; 
+  opacity: 0.9;
+  margin-top: 48rpx; 
+}
+
+.standard-card {
+  position: relative;
+  width: 630rpx;  
+  height: 200rpx; 
+  margin-bottom: 32rpx; 
   border-radius: 24rpx;
-  padding: 48rpx 32rpx;
-  margin-bottom: 32rpx;
-  text-align: center;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  box-sizing: border-box;
+  background: rgba(248, 244, 235, 0.9); 
+  z-index: 1;
 }
 
-.home-title {
-  font-size: 40rpx;
-  font-weight: 600;
-  color: var(--color-ink);
-  letter-spacing: 2rpx;
-  margin-bottom: 16rpx;
+.first-card  { border: 2rpx solid #5B9AA0; }
+.red-card    { border: 2rpx solid #E86B5C; }
+.green-card  { border: 2rpx solid #77A88D; }
+.yellow-card { border: 2rpx solid #D4A373; }
+
+.card-bg-layer { position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; opacity: 0.7; }
+
+.icon-box-clean {
+  width: 130rpx; 
+  height: 130rpx;
+  margin-left: 40rpx;
+  margin-right: 30rpx;
+  flex-shrink: 0;
+}
+.section-icon-full { width: 100%; height: 100%; display: block; }
+
+.section-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
-.home-subtitle {
-  font-size: 26rpx;
-  color: var(--color-ink-light);
-}
-
-.home-section {
-  background: var(--color-white);
-  border: 2rpx solid var(--color-border);
-  border-radius: 20rpx;
-  padding: 32rpx 28rpx;
-  margin-bottom: 24rpx;
-  box-shadow: 0 10rpx 24rpx rgba(0, 0, 0, 0.04);
-}
-
+/* --- 长方形内文字标题样式 --- */
 .home-section-title {
-  font-size: 32rpx;
-  font-weight: 600;
-  margin-bottom: 14rpx;
-  color: var(--color-ink);
+  /* 应用云端加载的书法字体 */
+  font-family: "Zhi Mang Xing", serif;
+  font-size: 38rpx; 
+  color: #3E2723;
+  line-height: 48rpx;
+  /* 适当上移，对应你之前的图片上移需求 */
+  margin-top: -8rpx; 
+  margin-bottom: 8rpx;
+  white-space: nowrap;
 }
 
-.home-section-desc {
-  font-size: 24rpx;
-  line-height: 1.6;
-  color: var(--color-ink-light);
-  margin-bottom: 24rpx;
-}
+.home-section-desc { font-size: 22rpx; color: #7A6C5D; line-height: 1.4; }
 
-.home-primary-button {
+.arrow-right { font-size: 38rpx; font-weight: bold; margin-right: 40rpx; }
+.first-card  .arrow-right { color: #5B9AA0; }
+.red-card    .arrow-right { color: #E86B5C; }
+.green-card  .arrow-right { color: #77A88D; }
+.yellow-card .arrow-right { color: #D4A373; }
+
+.footer-text { 
+  position: absolute;
+  bottom: 25rpx; 
   width: 100%;
-  background: var(--color-xiahong);
-  color: var(--color-white);
-  border-radius: 999rpx;
-  padding: 18rpx 0;
-  font-size: 28rpx;
-  font-weight: 600;
-  letter-spacing: 2rpx;
-}
-
-.home-primary-button::after {
-  border: none;
+  text-align: center;
+  font-family: "Noto Serif SC", "STSong", serif; 
+  font-size: 24rpx;    
+  line-height: 36rpx; 
+  color: #3E2723;     
+  opacity: 0.45;      
+  letter-spacing: 1rpx;
 }

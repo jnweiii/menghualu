@@ -1,0 +1,102 @@
+<view class="container">
+  <!-- 上部：地图区域 -->
+  <view
+    class="map-section {{isItineraryDragging ? 'map-section-dragging' : ''}}"
+    style="height: {{mapSectionHeightPx}}px;"
+  >
+    <map
+      id="routeMap"
+      latitude="{{latitude}}"
+      longitude="{{longitude}}"
+      scale="{{scale}}"
+      markers="{{markers}}"
+      polyline="{{polylines}}"
+      include-points="{{includePoints}}"
+      show-location
+      show-scale
+      show-compass
+      enable-zoom
+      enable-scroll
+      bindmarkertap="onMarkerTap"
+      style="width: 100%; height: 100%;"
+    ></map>
+    
+    <!-- 图例 -->
+    <view class="map-legend {{isLegendCollapsed ? 'map-legend-collapsed' : ''}}">
+      <view class="legend-title-row" bindtap="toggleLegendCollapse">
+        <view class="legend-title">📌 路线图例</view>
+        <view class="legend-toggle">{{isLegendCollapsed ? '展开' : '收起'}}</view>
+      </view>
+      <view class="legend-items" wx:if="{{!isLegendCollapsed}}">
+        <view class="legend-item" wx:for="{{dayColors}}" wx:key="index">
+          <view class="legend-color" style="background-color: {{item}};"></view>
+          <text class="legend-text">第{{index + 1}}天</text>
+        </view>
+      </view>
+      <view class="route-mode-panel" wx:if="{{!isLegendCollapsed}}">
+        <view class="route-mode-title">导航方式</view>
+        <view class="route-mode-list">
+          <view
+            class="route-mode-chip {{routeMode === item.mode ? 'route-mode-chip-active' : ''}}"
+            wx:for="{{routeModeOptions}}"
+            wx:key="mode"
+            data-mode="{{item.mode}}"
+            bindtap="onRouteModeChange"
+          >
+            {{item.label}}
+          </view>
+        </view>
+        <view class="route-loading" wx:if="{{isRouteLoading}}">路线计算中...</view>
+      </view>
+    </view>
+  </view>
+
+  <!-- 下部：行程规划 -->
+  <view class="itinerary-section">
+    <view
+      class="itinerary-drag-zone"
+      catchtouchstart="onItineraryTouchStart"
+      catchtouchmove="onItineraryTouchMove"
+      catchtouchend="onItineraryTouchEnd"
+      catchtouchcancel="onItineraryTouchEnd"
+      bindtap="toggleItineraryCollapse"
+    >
+      <view class="itinerary-drag-handle"></view>
+    </view>
+    <view class="itinerary-header">
+      <view class="days-summary">{{days}}天行程 · {{preferencesText}}</view>
+      <view class="itinerary-header-row">
+        <view class="route-title">🗺️ 点击图钉查看景点详情</view>
+        <view class="itinerary-toggle" bindtap="toggleItineraryCollapse">
+          {{isItineraryCollapsed ? '展开行程' : '收起行程'}}
+        </view>
+      </view>
+    </view>
+
+    <view class="timeline">
+      <block wx:for="{{itinerary}}" wx:key="index" wx:for-index="dayIndex">
+        <view class="day-item">
+          <view class="day-title" style="border-left-color: {{dayColors[dayIndex]}};">
+            <text class="day-number">第{{item.day}}天</text>
+          </view>
+          
+          <view class="spots-list">
+            <view class="spot-item" wx:for="{{item.spots}}" wx:key="name" wx:for-index="spotIndex">
+              <!-- 关键修复：确保点有正确的颜色和样式 -->
+              <view class="spot-dot" style="background-color: {{dayColors[dayIndex]}}; width: 16rpx; height: 16rpx; border-radius: 50%; margin-top: 8rpx; margin-right: 20rpx; flex-shrink: 0;"></view>
+              <view class="spot-content">
+                <view class="spot-name">{{item.name}}</view>
+                <view class="spot-desc">{{item.description}}</view>
+                <view class="spot-meta">
+                  <text class="time">🕒建议游玩时间： {{item.duration}}</text>
+                  <text class="transport"> 建议交通方式：{{item.transport}}</text>
+                </view>
+                <view class="spot-tip" wx:if="{{item.tip}}">💡 {{item.tip}}</view>
+              </view>
+            </view>
+          </view>
+        </view>
+      </block>
+    </view>
+  </view>
+</view>

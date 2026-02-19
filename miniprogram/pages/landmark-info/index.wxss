@@ -50,7 +50,18 @@ page {
   height: 400rpx;
 }
 
+.detail-swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.detail-swiper-item {
+  width: 100%;
+  height: 100%;
+}
+
 .detail-image {
+  display: block;
   width: 100%;
   height: 100%;
 }

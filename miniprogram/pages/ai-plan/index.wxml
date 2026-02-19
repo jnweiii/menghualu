@@ -1,0 +1,65 @@
+<view class="container">
+  <!-- 标题 -->
+  <view class="section-title">您想游玩多久？</view>
+  
+  <!-- 天数选择 -->
+  <view class="time-section">
+    <view class="time-row">
+      <view 
+        class="time-item {{dayActive1 ? 'active' : ''}}"
+        bindtap="selectDay1" 
+      >一天</view>
+      <view 
+        class="time-item {{dayActive2 ? 'active' : ''}}"
+        bindtap="selectDay2" 
+      >两天</view>
+      <view 
+        class="time-item {{dayActive3 ? 'active' : ''}}"
+        bindtap="selectDay3" 
+      >三天</view>
+    </view>
+    <view class="time-row">
+      <view 
+        class="time-item {{dayActive4 ? 'active' : ''}}"
+        bindtap="selectDay4" 
+      >四天</view>
+    </view>
+  </view>
+
+  <!-- 标题 -->
+  <view class="section-title">您的旅行偏好？</view>
+  
+  <!-- 偏好选择 - 手动控制每个按钮 -->
+  <view class="preference-section">
+    <view class="preference-row">
+      <view 
+        class="preference-item {{prefActive1 ? 'active' : ''}}"
+        bindtap="togglePref1" 
+      >轻松游乐</view>
+      <view 
+        class="preference-item {{prefActive2 ? 'active' : ''}}"
+        bindtap="togglePref2" 
+      >特种兵打卡</view>
+      <view 
+        class="preference-item {{prefActive3 ? 'active' : ''}}"
+        bindtap="togglePref3" 
+      >文化深度</view>
+    </view>
+    <view class="preference-row">
+      <view 
+        class="preference-item {{prefActive4 ? 'active' : ''}}"
+        bindtap="togglePref4" 
+      >亲子研学</view>
+      <view 
+        class="preference-item {{prefActive5 ? 'active' : ''}}"
+        bindtap="togglePref5" 
+      >摄影采风</view>
+    </view>
+  </view>
+
+  <!-- 规划按钮 -->
+  <view 
+    class="plan-btn {{(dayActive1 || dayActive2 || dayActive3 || dayActive4) && (prefActive1 || prefActive2 || prefActive3 || prefActive4 || prefActive5) ? 'enabled' : 'disabled'}}"
+    bindtap="goToPlanResult"
+  >点击规划</view>
+</view>

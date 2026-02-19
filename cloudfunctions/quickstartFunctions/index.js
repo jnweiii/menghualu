@@ -157,6 +157,7 @@ const deleteRecord = async (event) => {
   }
 };
 
+
 // const getOpenId = require('./getOpenId/index');
 // const getMiniProgramCode = require('./getMiniProgramCode/index');
 // const createCollection = require('./createCollection/index');

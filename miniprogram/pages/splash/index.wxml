@@ -1,16 +1,11 @@
 <view class="splash-page">
-  <view class="splash-background"></view>
+  <image class="full-bg" src="/images/splash/splash_bg.png" mode="aspectFill"></image>
+  
   <view class="splash-mask"></view>
 
   <view class="splash-content">
-    <view class="splash-logo">
-      梦华录数字地图
-    </view>
-    <view class="splash-slogan">
-      一眼千年，数字汴京
-    </view>
-    <view class="splash-tip">
-      正在进入首页…
-    </view>
+    <image class="main-design" src="/images/splash/SplashPage.png" mode="aspectFit"></image>
+    
+    <view class="loading-text">正在进入首页...</view>
   </view>
 </view>

@@ -7,8 +7,9 @@
     "pages/topicMap/index",
     "pages/landmark-detail/index",
     "pages/routeMap/index",
-    "pages/landmark-info/index"
-    
+    "pages/landmark-info/index",
+    "pages/ai-plan/index",
+    "pages/ai-plan-result/index"
   ],
   "window": {
     "backgroundColor": "#F8F6F0",
@@ -17,6 +18,14 @@
     "navigationBarTitleText": "梦华录数字地图",
     "navigationBarTextStyle": "white"
   },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于路线规划"
+    }
+  },
+  "requiredPrivateInfos": [
+    "getLocation"
+  ],
   "tabBar": {
     "color": "#7A6C5D",
     "selectedColor": "#C65A5A",
@@ -26,6 +35,12 @@
       {
         "pagePath": "pages/home/index",
         "text": "首页",
+        "iconPath": "images/icons/home.png",
+        "selectedIconPath": "images/icons/home-active.png"
+      },
+      {
+        "pagePath": "pages/ai-plan/index",
+        "text": "AI路线规划",
         "iconPath": "images/icons/home.png",
         "selectedIconPath": "images/icons/home-active.png"
       },

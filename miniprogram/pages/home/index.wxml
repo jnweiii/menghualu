@@ -1,36 +1,58 @@
 <view class="home-page">
+  <image class="global-background" src="../../images/home/home_bg_1.jpg" mode="aspectFill"></image>
+  
   <view class="home-hero">
-    <view class="home-title">梦华录数字地图</view>
+    <view class="home-title">东京梦华录数字地图</view>
     <view class="home-subtitle">数字回望，一眼千年</view>
   </view>
 
-  <view class="home-section">
-    <view class="home-section-title">开封宋迹总览地图</view>
-    <view class="home-section-desc">
-      以现代地图为底，叠加宋代东京城轮廓，古今对照一目了然
+  <view class="home-section standard-card first-card" bindtap="onGoMapOverview">
+    <image class="card-bg-layer" src="../../images/home/card_bg_1.jpg" mode="aspectFill"></image>
+    <view class="icon-box-clean">
+      <image class="section-icon-full" src="../../images/home/icon_1.png" mode="aspectFit"></image>
     </view>
-    <button class="home-primary-button" bindtap="onGoMapOverview">
-      进入地图
-    </button>
+    <view class="section-info">
+      <view class="home-section-title">开封宋迹总览地图</view>
+      <view class="home-section-desc">探索现代开封的宋代遗迹</view>
+    </view>
+    <view class="arrow-right">></view>
   </view>
 
-  <view class="home-section">
-    <view class="home-section-title">“东京梦华”专题地图</view>
-    <view class="home-section-desc">
-      夜市、美食、瓦子、节庆等专题切换，沉浸式体验宋代繁华
+  <view class="home-section standard-card red-card" bindtap="onGoTopicMap">
+    <image class="card-bg-layer" src="../../images/home/card_bg_2.jpg" mode="aspectFill"></image>
+    <view class="icon-box-clean">
+      <image class="section-icon-full" src="../../images/home/icon_topic.png" mode="aspectFit"></image>
     </view>
-    <button class="home-primary-button" bindtap="onGoTopicMap">
-      进入专题
-    </button>
+    <view class="section-info">
+      <view class="home-section-title">“东京梦华”专题地图</view>
+      <view class="home-section-desc">重现《东京梦华录》中的繁华场景</view>
+    </view>
+    <view class="arrow-right">></view>
   </view>
 
-  <view class="home-section">
-    <view class="home-section-title">全国“寻宋之旅”路线</view>
-    <view class="home-section-desc">
-      时间轴与地图联动，生成个性化寻宋路线
+  <view class="home-section standard-card green-card" bindtap="onGoRouteMap">
+    <image class="card-bg-layer" src="../../images/home/card_bg_3.jpg" mode="aspectFill"></image>
+    <view class="icon-box-clean">
+      <image class="section-icon-full" src="../../images/home/icon_3.png" mode="aspectFit"></image>
     </view>
-    <button class="home-primary-button" bindtap="onGoRouteMap">
-      进入路线
-    </button>
+    <view class="section-info">
+      <view class="home-section-title">全国“寻宋之旅”路线</view>
+      <view class="home-section-desc">追寻宋代文化的历史足迹</view>
+    </view>
+    <view class="arrow-right">></view>
   </view>
+
+  <view class="home-section standard-card yellow-card" bindtap="onGoHeritageMap">
+    <image class="card-bg-layer" src="../../images/home/card_bg_4.jpg" mode="aspectFill"></image>
+    <view class="icon-box-clean">
+      <image class="section-icon-full" src="../../images/home/icon_4.png" mode="aspectFit"></image>
+    </view>
+    <view class="section-info">
+      <view class="home-section-title">“非遗”专题地图</view>
+      <view class="home-section-desc">探索宋代非遗文化的历史魅力</view>
+    </view>
+    <view class="arrow-right">></view>
+  </view>
+
+  <view class="footer-text">© 2026 梦华录数字地图 · 传承宋代文化之美</view>
 </view>
